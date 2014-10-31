@@ -10,16 +10,42 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var myPerson = Person(first: "Lance", last: "Park", student: true)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func pushButton(sender: UIButton) {
+        println(myPerson.getFullName())
     }
+    
+    
+    
+}
 
-
+class Person {
+    
+    //Properties
+    var firstName = "Lance"
+    var lastName = "Park"
+    var isStudent : Bool = true
+    
+    //Initializer
+    init (first : String, last : String, student : Bool) {
+        firstName = first
+        lastName = last
+        isStudent = student
+    }
+    //Methods
+    func getFullName() -> String {
+        println(firstName + " " + lastName)
+        //Return students full name
+        return firstName + " " + lastName
+        
+    }
+    
 }
 

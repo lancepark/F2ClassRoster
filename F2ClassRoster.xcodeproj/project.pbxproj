@@ -77,11 +77,9 @@
 		3329590E1A03325A00E31E6D /* F2ClassRoster */ = {
 			isa = PBXGroup;
 			children = (
-				332959111A03325A00E31E6D /* AppDelegate.swift */,
-				332959131A03325A00E31E6D /* ViewController.swift */,
-				332959151A03325A00E31E6D /* Main.storyboard */,
-				332959181A03325A00E31E6D /* Images.xcassets */,
-				3329591A1A03325A00E31E6D /* LaunchScreen.xib */,
+				332959331A03332C00E31E6D /* View Layer */,
+				332959321A03332000E31E6D /* Model Layer */,
+				332959311A03330900E31E6D /* Controller Layer */,
 				3329590F1A03325A00E31E6D /* Supporting Files */,
 			);
 			path = F2ClassRoster;
@@ -110,6 +108,32 @@
 				332959261A03325A00E31E6D /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		332959311A03330900E31E6D /* Controller Layer */ = {
+			isa = PBXGroup;
+			children = (
+				332959111A03325A00E31E6D /* AppDelegate.swift */,
+				332959131A03325A00E31E6D /* ViewController.swift */,
+			);
+			name = "Controller Layer";
+			sourceTree = "<group>";
+		};
+		332959321A03332000E31E6D /* Model Layer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Model Layer";
+			sourceTree = "<group>";
+		};
+		332959331A03332C00E31E6D /* View Layer */ = {
+			isa = PBXGroup;
+			children = (
+				3329591A1A03325A00E31E6D /* LaunchScreen.xib */,
+				332959181A03325A00E31E6D /* Images.xcassets */,
+				332959151A03325A00E31E6D /* Main.storyboard */,
+			);
+			name = "View Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
