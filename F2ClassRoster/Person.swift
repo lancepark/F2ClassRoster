@@ -27,7 +27,8 @@ class Person {
     //Methods
     func getFullName() -> String {
         //Return students full name
-        return firstName + " " + lastName
+        //return firstName + " " + lastName
+        return "\(self.firstName) \(self.lastName)"
         
     }
     
