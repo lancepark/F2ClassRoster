@@ -13,6 +13,8 @@
 		332959191A03325A00E31E6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 332959181A03325A00E31E6D /* Images.xcassets */; };
 		3329591C1A03325A00E31E6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3329591A1A03325A00E31E6D /* LaunchScreen.xib */; };
 		332959281A03325A00E31E6D /* F2ClassRosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332959271A03325A00E31E6D /* F2ClassRosterTests.swift */; };
+		337E34601A1C455B00006903 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E345F1A1C455B00006903 /* DetailViewController.swift */; };
+		33BA7CCB1A0B552400355F0A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA7CCA1A0B552400355F0A /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		332959211A03325A00E31E6D /* F2ClassRosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = F2ClassRosterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		332959261A03325A00E31E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332959271A03325A00E31E6D /* F2ClassRosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F2ClassRosterTests.swift; sourceTree = "<group>"; };
+		337E345F1A1C455B00006903 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		33BA7CCA1A0B552400355F0A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,9 @@
 		3329590E1A03325A00E31E6D /* F2ClassRoster */ = {
 			isa = PBXGroup;
 			children = (
+				332959311A03330900E31E6D /* Controller Layer */,
 				332959331A03332C00E31E6D /* View Layer */,
 				332959321A03332000E31E6D /* Model Layer */,
-				332959311A03330900E31E6D /* Controller Layer */,
 				3329590F1A03325A00E31E6D /* Supporting Files */,
 			);
 			path = F2ClassRoster;
@@ -115,6 +119,7 @@
 			children = (
 				332959111A03325A00E31E6D /* AppDelegate.swift */,
 				332959131A03325A00E31E6D /* ViewController.swift */,
+				337E345F1A1C455B00006903 /* DetailViewController.swift */,
 			);
 			name = "Controller Layer";
 			sourceTree = "<group>";
@@ -122,6 +127,7 @@
 		332959321A03332000E31E6D /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				33BA7CCA1A0B552400355F0A /* Person.swift */,
 			);
 			name = "Model Layer";
 			sourceTree = "<group>";
@@ -236,8 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33BA7CCB1A0B552400355F0A /* Person.swift in Sources */,
 				332959141A03325A00E31E6D /* ViewController.swift in Sources */,
 				332959121A03325A00E31E6D /* AppDelegate.swift in Sources */,
+				337E34601A1C455B00006903 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +437,7 @@
 				3329592D1A03325A00E31E6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3329592E1A03325A00E31E6D /* Build configuration list for PBXNativeTarget "F2ClassRosterTests" */ = {
 			isa = XCConfigurationList;
@@ -437,6 +446,7 @@
 				332959301A03325A00E31E6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
