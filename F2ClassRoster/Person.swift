@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Person {
     
@@ -14,6 +15,8 @@ class Person {
     var firstName = "Lance"
     var lastName = "Park"
     var isStudent : Bool = true
+    var image : UIImage?
+    
     
     //Initializer
     init (first : String, last : String, student : Bool) {
@@ -23,7 +26,6 @@ class Person {
     }
     //Methods
     func getFullName() -> String {
-        println(firstName + " " + lastName)
         //Return students full name
         return firstName + " " + lastName
         

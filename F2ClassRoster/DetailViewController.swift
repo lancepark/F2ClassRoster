@@ -49,6 +49,32 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    //Implement Protocal Code Functions
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        //Update Selected Person's Name
+        
+        switch textField {
+        case firstName:
+            self.selectedPerson.firstName = textField.text
+        case lastName:
+            self.selectedPerson.lastName = textField.text
+        default:
+            textField.resignFirstResponder()
+            
+            
+        }
+        
+        
+        //Dismiss Keyboard after pressing enter
+        
+        textField.resignFirstResponder()
+        return true
+        
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

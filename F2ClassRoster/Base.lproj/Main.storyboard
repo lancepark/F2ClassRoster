@@ -79,23 +79,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5Y-Cl-H8v">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="First" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5Y-Cl-H8v">
                                 <rect key="frame" x="252" y="166" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="q4g-6y-kps"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9K-Hz-XQp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Last" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9K-Hz-XQp">
                                 <rect key="frame" x="252" y="240" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="oby-XB-Xcp"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enrollment" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJc-Ah-TCf">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enrollment" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eJc-Ah-TCf">
                                 <rect key="frame" x="252" y="316" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="AOF-fi-KFS"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zRY-PD-J7c">
+                                <rect key="frame" x="180" y="399" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="bSo-dI-WbQ"/>
+                                    <constraint firstAttribute="width" constant="240" id="wdm-LU-CUc"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="eJc-Ah-TCf" secondAttribute="centerX" constant="-0.5" id="6zl-YD-nD3"/>
+                            <constraint firstItem="a5Y-Cl-H8v" firstAttribute="top" secondItem="Nre-b6-yAB" secondAttribute="bottom" constant="30" id="AIR-OO-Uiv"/>
+                            <constraint firstAttribute="centerX" secondItem="zRY-PD-J7c" secondAttribute="centerX" id="CVR-wH-PLH"/>
+                            <constraint firstItem="eJc-Ah-TCf" firstAttribute="top" secondItem="B9K-Hz-XQp" secondAttribute="bottom" constant="30" id="DsM-yQ-v0K"/>
+                            <constraint firstAttribute="centerX" secondItem="a5Y-Cl-H8v" secondAttribute="centerX" constant="-0.5" id="Thi-oh-Ovc"/>
+                            <constraint firstItem="B9K-Hz-XQp" firstAttribute="top" secondItem="a5Y-Cl-H8v" secondAttribute="bottom" constant="30" id="XCg-XO-MAe"/>
+                            <constraint firstItem="zRY-PD-J7c" firstAttribute="top" secondItem="eJc-Ah-TCf" secondAttribute="bottom" constant="30" id="fZA-qs-QlX"/>
+                            <constraint firstAttribute="centerX" secondItem="B9K-Hz-XQp" secondAttribute="centerX" constant="-0.5" id="qKB-kd-Qsb"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="firstName" destination="a5Y-Cl-H8v" id="GEp-yA-hbq"/>
