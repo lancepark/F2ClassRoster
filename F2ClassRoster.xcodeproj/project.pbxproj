@@ -14,6 +14,7 @@
 		3329591C1A03325A00E31E6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3329591A1A03325A00E31E6D /* LaunchScreen.xib */; };
 		332959281A03325A00E31E6D /* F2ClassRosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 332959271A03325A00E31E6D /* F2ClassRosterTests.swift */; };
 		337E34601A1C455B00006903 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E345F1A1C455B00006903 /* DetailViewController.swift */; };
+		337E34621A1DC37300006903 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E34611A1DC37300006903 /* PersonTableViewCell.swift */; };
 		33BA7CCB1A0B552400355F0A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BA7CCA1A0B552400355F0A /* Person.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		332959261A03325A00E31E6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		332959271A03325A00E31E6D /* F2ClassRosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F2ClassRosterTests.swift; sourceTree = "<group>"; };
 		337E345F1A1C455B00006903 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		337E34611A1DC37300006903 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		33BA7CCA1A0B552400355F0A /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 				3329591A1A03325A00E31E6D /* LaunchScreen.xib */,
 				332959181A03325A00E31E6D /* Images.xcassets */,
 				332959151A03325A00E31E6D /* Main.storyboard */,
+				337E34611A1DC37300006903 /* PersonTableViewCell.swift */,
 			);
 			name = "View Layer";
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				33BA7CCB1A0B552400355F0A /* Person.swift in Sources */,
 				332959141A03325A00E31E6D /* ViewController.swift in Sources */,
 				332959121A03325A00E31E6D /* AppDelegate.swift in Sources */,
+				337E34621A1DC37300006903 /* PersonTableViewCell.swift in Sources */,
 				337E34601A1C455B00006903 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

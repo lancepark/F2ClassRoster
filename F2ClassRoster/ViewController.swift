@@ -58,16 +58,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
        
-        let cell = tableView.dequeueReusableCellWithIdentifier("PERSON_CELL", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("PERSON_CELL", forIndexPath: indexPath) as PersonTableViewCell
     
         // cell.backgroundColor = UIColor.blueColor()
         
         var personToDisplay = self.people[indexPath.row]
         
-        cell.textLabel.text = personToDisplay.getFullName() 
+        //cell.textLabel.text = personToDisplay.getFullName()
         
+        cell.firstLabel.text = personToDisplay.firstName
+        cell.lastLabel.text = personToDisplay.lastName
         
-        
+        if personToDisplay.image != nil {
+            cell.portrait.image = personToDisplay.image
+        }
         
         return cell
         
