@@ -8,11 +8,12 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     //Properties
     
     var selectedPerson = Person(first: "John", last: "Doe", student: false)
+    var imagePickerController = UIImagePickerController()
     
     //Outlets
     
@@ -23,8 +24,29 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var isStudent: UITextField!
     
-    //Overrides
+    @IBOutlet weak var portrait: UIImageView!
     
+    
+    //Functions
+    
+    @IBAction func selectPhotoRelease(sender: AnyObject) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
+            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            
+            self.imagePickerController.delegate = self
+            
+            self.imagePickerController.allowsEditing = true
+            self.presentViewController(self.imagePickerController, animated: true, completion: nil)
+            
+        }
+        
+        
+        
+    }
+    
+    
+    //Overrides
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +70,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
         }
         
+       self.portrait.image = selectedPerson.image
     }
     
     //Implement Protocal Code Functions
@@ -76,6 +99,15 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
         
     }
 
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
+        let image = info[UIImagePickerControllerEditedImage] as UIImage
+        self.portrait.image = image
+        
+        imagePickerController.dismissViewControllerAnimated(true, completion: nil)
+        self.selectedPerson.image = image
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

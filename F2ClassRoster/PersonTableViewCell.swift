@@ -15,7 +15,6 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var portrait: UIImageView!
     
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

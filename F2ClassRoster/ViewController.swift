@@ -30,23 +30,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.tableView.dataSource = self
         self.tableView.delegate = self
        
+        if let peopleFromArchive = self.loadFromArchive() as [Person]? {
+            self.people = peopleFromArchive
+        }
+        else {
+            self.loadFromPlist()
+            self.saveToArchive()
+            
+        }
         // Create Person Objects to fill People
-        var lancePark = Person(first: "Lance", last: "Park", student: true)
-        var robertLee = Person(first: "Robert", last: "Lee", student: true)
-        var maryPark = Person(first: "Mary", last: "Park", student: false)
-        var johnGrossi = Person(first: "John", last: "Grossi", student: false)
-        var richLee = Person(first: "Rich", last: "Lee", student: false)
-        
-        self.people  = [lancePark, robertLee, maryPark, johnGrossi, richLee]
-        
+        //var lancePark = Person(first: "Lance", last: "Park", student: true)
+//        var robertLee = Person(first: "Robert", last: "Lee", student: true)
+//        var maryPark = Person(first: "Mary", last: "Park", student: false)
+//        var johnGrossi = Person(first: "John", last: "Grossi", student: false)
+//        var richLee = Person(first: "Rich", last: "Lee", student: false)
+//        
+//        self.people  = [lancePark, robertLee, maryPark, johnGrossi, richLee]
+//        
         
     }
 
     
     @IBAction func pushButton(sender: UIButton) {
         println(myPerson.getFullName())
+    
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
         
     }
+    
+    
     
     // Implement Protocal Functions
     
@@ -76,6 +92,39 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
         
     }
+    
+    func loadFromPlist() {
+        
+        let plistURL = NSBundle.mainBundle().pathForResource("Roster", ofType: "plist")
+        
+        let plistArray = NSArray(contentsOfFile: plistURL!)
+        for object in plistArray! {
+            if let personDictionary = object as? NSDictionary {
+                let firstName = personDictionary["First Name"] as String
+                let lastName = personDictionary["Last Name"] as String
+                let isStudent = personDictionary["Is Student"] as Bool
+                var person = Person(first: firstName, last: lastName, student: isStudent)
+                self.people.append(person)
+            }
+        }
+        
+        
+    }
+    
+    func loadFromArchive() -> [Person]? {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        
+        if let peopleFromArchive = NSKeyedUnarchiver.unarchiveObjectWithFile(documentsPath + "/archive1") as? [Person] {
+            return peopleFromArchive
+        }
+        return nil
+    }
+    
+    func saveToArchive() {
+        let documentsPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+        NSKeyedArchiver.archiveRootObject(self.people, toFile: documentsPath + "/archive1")
+    }
+
     
     // Segues
     
